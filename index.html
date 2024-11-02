@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700;800;900&display=swap" rel="stylesheet">
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Tajawal", sans-serif;
+        }
+        body{
+            background: linear-gradient(45deg, rgb(4, 41, 64), rgb( 0, 92, 83));
+            
+        }
+        #city{
+            margin-right: 34px;
+        }
+        #city-name{
+            color: white;
+            font-size: 8em;
+            margin-top: 34px;
+            font-weight: 400;
+        }
+        #date{
+            color: white;
+            font-size: 3em;
+            font-weight: 200;
+        }
+        #prayerTimes{
+            height: 300px;
+        }
+        .card{
+            width: 12%;
+            background-color: white;
+            height: 95%;
+        }
+    </style>
+</head>
+<body dir="rtl">
+    <div>
+
+        <!-- CITY NAME + DATE -->
+         <div id="city">
+            <h1 id="city-name">القاهرة</h1>
+            <h6 id="date">السبت 6 أكتوبر</h6>
+         </div>
+        <!-- // CITY NAME + DATE -->
+         <hr style="margin: 0 34px; border-color: rgb(4, 41, 64); border-width: 2px;">
+
+         <!-- PRAYER TIMES -->
+          <div id="prayerTimes">
+            <div class="card">
+                <div class="header">الفجر</div>
+                <div class="body">5:00 am</div>
+            </div>
+          </div>
+         <!-- // PRAYER TIMES// -->
+
+    </div>
+</body>
+</html>
