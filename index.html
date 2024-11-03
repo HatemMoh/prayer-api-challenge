@@ -1,70 +1,245 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
 
     <!-- fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700;800;900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700;800;900&display=swap"
+      rel="stylesheet"
+    />
 
     <style>
-        *{
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: "Tajawal", sans-serif;
-        }
-        body{
-            background: linear-gradient(45deg, rgb(4, 41, 64), rgb( 0, 92, 83));
-            
-        }
-        #city{
-            margin-right: 34px;
-        }
-        #city-name{
-            color: white;
-            font-size: 8em;
-            margin-top: 34px;
-            font-weight: 400;
-        }
-        #date{
-            color: white;
-            font-size: 3em;
-            font-weight: 200;
-        }
-        #prayerTimes{
-            height: 300px;
-        }
-        .card{
-            width: 12%;
-            background-color: white;
-            height: 95%;
-        }
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Tajawal", sans-serif;
+      }
+      body {
+        background: linear-gradient(45deg, rgb(4, 41, 64), rgb(0, 92, 83));
+        height: 100vh;
+      }
+      #city {
+        margin-right: 34px;
+      }
+      #city-name {
+        color: white;
+        font-size: 8em;
+        margin-top: 34px;
+        font-weight: 400;
+      }
+      #date {
+        color: white;
+        font-size: 3em;
+        font-weight: 200;
+      }
+      #prayerTimes {
+        margin-top: 100px;
+        height: 200px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+      }
+      .card {
+        width: 12%;
+        background-color: white;
+        height: 95%;
+      }
+      .header {
+        background-color: rgb(0, 92, 83);
+        color: white;
+        text-align: center;
+      }
+      .header h1 {
+        font-size: 2em;
+        font-weight: 200;
+      }
+      .body {
+        height: 80%;
+      }
+      .body h1 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: inherit;
+      }
+      #cities {
+        margin-top: 125px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: 10px;
+      }
+      #cities h1 {
+        color: white;
+        font-size: 1.5em;
+        font-weight: 400;
+      }
+      #city-select {
+        background: none;
+        border-radius: 14px;
+        width: 200px;
+        padding: 4px;
+        color: white;
+        font-weight: 400;
+      }
+      #option {
+        background: none;
+      }
     </style>
-</head>
-<body dir="rtl">
+  </head>
+  <body dir="rtl">
     <div>
+      <!-- CITY NAME + DATE -->
+      <div id="city">
+        <h1 id="city-name">القاهرة</h1>
+        <h6 id="date">السبت 6 أكتوبر</h6>
+      </div>
+      <!-- // CITY NAME + DATE -->
+      <hr
+        style="margin: 0 34px; border-color: rgb(4, 41, 64); border-width: 2px"
+      />
 
-        <!-- CITY NAME + DATE -->
-         <div id="city">
-            <h1 id="city-name">القاهرة</h1>
-            <h6 id="date">السبت 6 أكتوبر</h6>
-         </div>
-        <!-- // CITY NAME + DATE -->
-         <hr style="margin: 0 34px; border-color: rgb(4, 41, 64); border-width: 2px;">
-
-         <!-- PRAYER TIMES -->
-          <div id="prayerTimes">
-            <div class="card">
-                <div class="header">الفجر</div>
-                <div class="body">5:00 am</div>
-            </div>
+      <!-- PRAYER TIMES -->
+      <div id="prayerTimes">
+        <!-- PRAYER TIME CARD -->
+        <div class="card">
+          <div class="header">
+            <h1>الفجر</h1>
           </div>
-         <!-- // PRAYER TIMES// -->
+          <div class="body">
+            <h1 id="fajr-time">05:00</h1>
+          </div>
+        </div>
+        <!-- // PRAYER TIME CARD -->
 
+        <!-- PRAYER TIME CARD -->
+        <div class="card">
+          <div class="header">
+            <h1>الظهر</h1>
+          </div>
+          <div class="body">
+            <h1 id="zohr-time">12:15</h1>
+          </div>
+        </div>
+        <!-- // PRAYER TIME CARD -->
+
+        <!-- PRAYER TIME CARD -->
+        <div class="card">
+          <div class="header">
+            <h1>العصر</h1>
+          </div>
+          <div class="body">
+            <h1 id="asr-time">03:00</h1>
+          </div>
+        </div>
+        <!-- // PRAYER TIME CARD -->
+
+        <!-- PRAYER TIME CARD -->
+        <div class="card">
+          <div class="header">
+            <h1>المغرب</h1>
+          </div>
+          <div class="body">
+            <h1 id="maghreb-time">06:00</h1>
+          </div>
+        </div>
+        <!-- // PRAYER TIME CARD -->
+
+        <!-- PRAYER TIME CARD -->
+        <div class="card">
+          <div class="header">
+            <h1>العشاء</h1>
+          </div>
+          <div class="body">
+            <h1 id="isha-time">08:00</h1>
+          </div>
+        </div>
+        <!-- // PRAYER TIME CARD -->
+      </div>
+      <!-- // PRAYER TIMES// -->
+
+      <!-- SELECT CITY -->
+      <div id="cities">
+        <h1>اختر مدينة</h1>
+        <select id="city-select">
+          <!-- Add more options here -->
+        </select>
+      </div>
+      <!-- // SELECT CITY -->
     </div>
-</body>
+  </body>
+
+  <script src="./node_modules/axios/dist/axios.min.js"></script>
+
+  <script>
+    let cities = [
+      {
+        arabicName: "القاهرة",
+        name: "EG-Cairo",
+      },
+      {
+        arabicName: "الاسكندرية",
+        name: "EG-ALX",
+      },
+      {
+        arabicName: "الاقصر",
+        name: "EG-LX",
+      },
+    ];
+
+    for (const city of cities) {
+      let content = `
+        <option value="${city.arabicName}" id="option">${city.arabicName}</option>
+      `;
+      document.getElementById("city-select").innerHTML += content;
+    }
+    document
+      .getElementById("city-select")
+      .addEventListener("change", function () {
+        const selectedCity = this.value;
+        document.getElementById("city-name").innerHTML = selectedCity;
+        fetchPrayerTimes(selectedCity);
+      });
+
+    function fetchPrayerTimes(cityName) {
+      let params = {
+        country: "EG",
+        city: cityName,
+      };
+      axios
+        .get("http://api.aladhan.com/v1/timingsByCity", {
+          params: params,
+        })
+        .then(function (response) {
+          const timings = response.data.data.timings;
+          fillTimeForPrayer("fajr-time", timings.Fajr);
+          fillTimeForPrayer("zohr-time", timings.Dhuhr);
+          fillTimeForPrayer("asr-time", timings.Asr);
+          fillTimeForPrayer("maghreb-time", timings.Maghrib);
+          fillTimeForPrayer("isha-time", timings.Isha);
+
+          const readableDate = response.data.data.date.readable;
+          const weekDay = response.data.data.date.hijri.weekday.ar;
+          document.getElementById("date").innerHTML =
+            weekDay + " " + readableDate;
+        })
+        .catch(function (error) {
+          console.log(error);
+        });
+    }
+
+    // default value when refreshed
+    fetchPrayerTimes("القاهرة");
+
+    function fillTimeForPrayer(id, time) {
+      document.getElementById(id).innerHTML = time;
+    }
+  </script>
 </html>
